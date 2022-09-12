@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VariableHolder : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        //float arenaX = 25.75f;
-        //float arenaZ = 16.0f; //0 for the other z value //HALFWAY Point of arena, 32 for full
+        //switch between screens, add game over when player dies
     }
 
     // Update is called once per frame

@@ -7,17 +7,18 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] enemies; //index 1 and 2 are fighters, index 3 is destroyer
     private static float xRange = 25.0f;
     private static float zPos = 35.0f; //spawns a little above game area
-    private float spawnInterval = 3.0f;
-    private float enemiesSpawned;
-    private int enemyVariety;
-    private int enemyCap;
+    public float spawnInterval = 3.0f;
+    public float enemiesSpawned;
+    public int enemyVariety;
+    public int enemyCap; 
     bool spawn = true;
 
     void Start()
     {
-        enemiesSpawned = 0;
-        enemyVariety = 2; //index 1 and 2 are fighters, index 3 is destroyer
-        enemyCap = 8;
+        //enemiesSpawned = 0;
+        //enemyVariety = 2; //index 1 and 2 are fighters, index 3 is destroyer
+        //enemyCap = 8;
+        //spawnInterval = 3.0f;
     }
 
     // Update is called once per frame

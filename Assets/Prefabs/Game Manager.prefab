@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5681000915971554072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5681000915971554078}
+  - component: {fileID: 5681000915971554079}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5681000915971554078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681000915971554072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6079245, y: -152.916, z: 77.21624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5681000915971554079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681000915971554072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2d6bbbbf13d6e4c9af4b90fd898cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2390539943337119224, guid: a8006ae9021d56647aca32ee8d39352c, type: 3}
+  controller: {fileID: 2390539943337119203, guid: a8006ae9021d56647aca32ee8d39352c, type: 3}
+  spawnManager: {fileID: 5982682865827447856, guid: a37e684bd93fac944953bd35a4a22a5d, type: 3}
+  boundary: {fileID: 8472634526076076946, guid: d2fe96ece502d824e9af4b9d80472c9d, type: 3}
+  playerHPText: {fileID: 7678382711260562036, guid: 0bb809abdea0d0f47aeaccb708dba5ef, type: 3}
+  playButton: {fileID: 660759106038376636, guid: 7ea33302791dcb64793d9a7398395c48, type: 3}
+  tutorialButton: {fileID: 7902635594748770976, guid: 774f922fba803aa4f9fa4d3875688b2b, type: 3}
+  quitButton: {fileID: 5466846888193210442, guid: 8b97c03e6a0e7b84f8c1c98e71e0f722, type: 3}
+  menuButton: {fileID: 6553979419939701052, guid: 7b3cabc42c5a9df4695d11717618c211, type: 3}
+  winText: {fileID: 1056408367078537512, guid: b540b8bc3f022c943ac0e3a6fade1a31, type: 3}
+  loseText: {fileID: 3018536709661329998, guid: 70eb50e30d2b5e145b22251ce63f2d7d, type: 3}

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     float xRange = 25.75f;
     float zRange = 16.0f;
+    public int playerHP = 3;
    
 
 
@@ -56,8 +57,14 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("enemy") || other.CompareTag("danger"))
         {
-            Destroy(gameObject);
-            //add a game over screen
+            playerHP--;
+            Destroy(other.gameObject);
+            if (playerHP <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
+
+    //add an abort
 }

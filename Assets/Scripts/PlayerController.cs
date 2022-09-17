@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         //moves player
-        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
-        transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);  //originally forward
+        transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput); //orginally right
 
         //shoots bullets
         if (Input.GetKeyDown(KeyCode.Space))

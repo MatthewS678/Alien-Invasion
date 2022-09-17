@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerProjectile : MonoBehaviour
 {
     public float speed;
-    public float zRange = 33.0f;
+    public float zRange = 32.1f;
     void Start()
     {
 

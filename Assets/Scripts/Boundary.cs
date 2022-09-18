@@ -19,7 +19,7 @@ public class Boundary : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("enemy"))
+        if (other.CompareTag("enemy")) //when enemy passes green line: game over
         {
             EarthDestroyed = true;
         }

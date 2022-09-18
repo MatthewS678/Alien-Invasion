@@ -18,13 +18,13 @@ public class TextManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.gameWin)
+        if (gameManager.gameWin) //game win screen
         {
             winText.gameObject.SetActive(true);
             loseText.gameObject.SetActive(false);
         }
 
-        if (gameManager.gameOver)
+        if (gameManager.gameOver) //game lose screen
         {
             winText.gameObject.SetActive(false);
             loseText.gameObject.SetActive(true);

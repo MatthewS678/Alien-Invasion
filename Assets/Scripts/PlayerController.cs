@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,8 +26,8 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         //moves player
-        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);  //originally forward
-        transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput); //orginally right
+        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);  
+        transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput); 
 
         //shoots bullets
         if (Input.GetKeyDown(KeyCode.Space))
@@ -51,9 +52,14 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y,0);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) //goes back to menu when press esc
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other) //damages player when touching a enemy bullet or ship, destroys the enemey ship/bullet
     {
         if (other.CompareTag("enemy") || other.CompareTag("danger"))
         {
@@ -66,5 +72,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //add an abort
+    
 }

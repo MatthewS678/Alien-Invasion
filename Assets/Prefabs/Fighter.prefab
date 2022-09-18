@@ -115,6 +115,7 @@ MonoBehaviour:
   shotDelay: 1.5
   speed: 2.75
   projectilePrefab: {fileID: 29022528009807222, guid: 1653c7c2112786a44ac0a032517d4ec1, type: 3}
+  explosionParticle: {fileID: 898310819860788631, guid: 11afda0e58de1e149837ff7c1fcd66fd, type: 3}
 --- !u!54 &6210762040522663911
 Rigidbody:
   m_ObjectHideFlags: 0

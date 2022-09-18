@@ -9,7 +9,7 @@ public class Destroyer : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int HP = 3;
     public GameObject projectilePrefab;
-    
+    public ParticleSystem explosionParticle;
 
 
     // Start is called before the first frame update
@@ -41,6 +41,7 @@ public class Destroyer : MonoBehaviour
             Destroy(other.gameObject);
             if (HP <= 0)
             {
+                Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
                 Destroy(gameObject);
             }
         }

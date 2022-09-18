@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void StartGame() //start button
+    public void StartGame() //start button, resets and instantiates spawnmanagers variables again
     {
         SceneManager.LoadScene(1);
         //Instantiate(player, playerSpawnPos, Quaternion.Euler(0f, 0f, 0f));
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
-    public void Instructions()
+    public void Instructions() // instructions button
     {
         SceneManager.LoadScene(4);
     }

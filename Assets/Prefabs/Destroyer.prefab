@@ -116,6 +116,7 @@ MonoBehaviour:
   speed: 2
   HP: 3
   projectilePrefab: {fileID: 29022528009807222, guid: 1653c7c2112786a44ac0a032517d4ec1, type: 3}
+  explosionParticle: {fileID: 898310819860788631, guid: 559550a35cc4a204396d6b2e2a2e64c9, type: 3}
 --- !u!54 &5024912515173289997
 Rigidbody:
   m_ObjectHideFlags: 0

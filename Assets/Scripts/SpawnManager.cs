@@ -35,7 +35,7 @@ public class SpawnManager : MonoBehaviour
             enemyCap += 10;
         }
 
-        if (enemiesSpawned >= 12) //after 12 enemies spawned, destroyers will now spawn
+        if (enemiesSpawned >= 10) //after 10 enemies spawned, destroyers will now spawn
         {
             enemyVariety = 3;
         }

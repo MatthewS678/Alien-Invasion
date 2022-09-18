@@ -533,13 +533,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Controls: WASD or arrow keys to move, press space to shoot bullets.
+  m_text: 'Controls: WASD or arrow keys to move, press space to shoot bullets. Press
+    Esc to quit.
 
 
-    Gameplay:
-    Destroy ships before they can reach Earth(green line). Enemy bullets and ships
-    will damage you and you lose when your health reaches zero or a ship reaches
-    Earth. Survive long enough and you will save Earth!'
+    Gameplay: Destroy ships before they can reach Earth(green
+    line). Enemy bullets and ships will damage you and you lose when your health
+    reaches zero or a ship reaches Earth. Survive long enough and you will save Earth!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -566,8 +566,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

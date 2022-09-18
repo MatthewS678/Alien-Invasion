@@ -42,6 +42,16 @@ public class GameManager : MonoBehaviour
     {
         playerHPText.text = "HP: " + controller.playerHP;
 
+        if(controller.playerHP == 2)
+        {
+            playerHPText.color = Color.yellow;
+        }
+
+        if (controller.playerHP == 1)
+        {
+            playerHPText.color = Color.red;
+        }
+
         if (controller.playerHP <= 0 || boundary.EarthDestroyed)
         {
             gameOver = true;
@@ -75,7 +85,7 @@ public class GameManager : MonoBehaviour
         //Instantiate(player, playerSpawnPos, Quaternion.Euler(0f, 0f, 0f));
         spawnManager.enemiesSpawned = 0;
         spawnManager.enemyVariety = 2; //index 1 and 2 are fighters, index 3 is destroyer
-        spawnManager.enemyCap = 8;
+        spawnManager.enemyCap = 5;
         spawnManager.spawnInterval = 3.0f;
         
     }

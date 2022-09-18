@@ -8,16 +8,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 12.0f;
     private Rigidbody playerRb;
     public GameObject projectilePrefab;
-    float xRange = 25.75f;
+   // public Renderer playerColor;
+    float xRange = 28.75f;
     float zRange = 16.0f;
     public int playerHP = 3;
-   
+    //public bool immune = false;
+    //int counter = 0;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
-        playerRb = GetComponent<Rigidbody>();
+       //playerColor = GetComponent<Renderer>();  
+       playerRb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -61,16 +65,40 @@ public class PlayerController : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) //damages player when touching a enemy bullet or ship, destroys the enemey ship/bullet
     {
-        if (other.CompareTag("enemy") || other.CompareTag("danger"))
-        {
-            playerHP--;
-            Destroy(other.gameObject);
-            if (playerHP <= 0)
+        //if (!immune) {
+            if (other.CompareTag("enemy") || other.CompareTag("danger"))
             {
-                Destroy(gameObject);
+                //counter =0;
+                playerHP--;
+                Destroy(other.gameObject);
+                if (playerHP <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                //immune = true;
+                //while (counter <= 10){
+                //    InvokeRepeating("TurnRed", 0f, 0.2f);
+               //     InvokeRepeating("TurnBlue", 0.1f, 0.2f);
+               // }
+               // immune = false;
             }
-        }
+     }
+        
     }
 
-    
-}
+   // public void TurnRed()
+    //{
+    //    Color myColor = new Color(255, 0, 0, 160);
+    //    playerColor.material.color = myColor;
+     //   counter++;
+   // }
+
+    //public void TurnBlue()
+    //{
+     //   Color myColor = new Color(0, 0, 255, 160);
+     //   playerColor.material.color = myColor;
+    //    counter++;
+    //}
+
+
+

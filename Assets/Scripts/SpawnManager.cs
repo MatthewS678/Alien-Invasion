@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemies; //index 1 and 2 are fighters, index 3 is destroyer
-    private static float xRange = 25.0f;
+    private static float xRange = 27.5f;
     private static float zPos = 35.0f; //spawns a little above game area
     public float spawnInterval = 3.0f;
     public float enemiesSpawned;
@@ -29,13 +29,13 @@ public class SpawnManager : MonoBehaviour
             StartCoroutine(spawnEnemy());
         }
 
-        if (enemiesSpawned >= enemyCap && spawnInterval > 2) //increase spawn time for each amount of enemies spawned
+        if (enemiesSpawned >= enemyCap && spawnInterval > 1.8f) //increase spawn time for each amount of enemies spawned
         {
             spawnInterval -= 0.2f;
-            enemyCap += 10;
+            enemyCap += 7;
         }
 
-        if (enemiesSpawned >= 10) //after 10 enemies spawned, destroyers will now spawn
+        if (enemiesSpawned >= 9) //after 9 enemies spawned, destroyers will now spawn
         {
             enemyVariety = 3;
         }

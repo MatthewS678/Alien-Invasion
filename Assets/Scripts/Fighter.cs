@@ -9,7 +9,6 @@ public class Fighter : MonoBehaviour
     [SerializeField] private float speed;
     public GameObject projectilePrefab;
     public ParticleSystem explosionParticle;
-    //public AudioSource explosionSound;
 
 
     // Start is called before the first frame update
@@ -32,7 +31,7 @@ public class Fighter : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bullet"))
-        {
+        {   
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
             Destroy(gameObject);
             Destroy(other.gameObject);

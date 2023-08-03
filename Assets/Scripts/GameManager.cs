@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
             //winText.gameObject.SetActive(false);    
         }
 
-        if (gameWin) //player destroys certain # of ships  (or boss)
+        if (gameWin) //player destroys certain # of ships  
         {
             SceneManager.LoadScene(3);
             //winText.gameObject.SetActive(false);

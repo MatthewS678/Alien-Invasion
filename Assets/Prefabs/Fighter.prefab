@@ -116,6 +116,7 @@ MonoBehaviour:
   speed: 2.75
   projectilePrefab: {fileID: 29022528009807222, guid: 1653c7c2112786a44ac0a032517d4ec1, type: 3}
   explosionParticle: {fileID: 898310819860788631, guid: 11afda0e58de1e149837ff7c1fcd66fd, type: 3}
+  explosionSound: {fileID: 3860301508546401046, guid: 76761d7832ac0124f86eee963fd73ead, type: 3}
 --- !u!54 &6210762040522663911
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -12,9 +12,11 @@ public class PlayerController : MonoBehaviour
     float xRange = 28.75f;
     float zRange = 16.0f;
     public int playerHP = 3;
+    public AudioSource damaged;
+    public AudioSource shoot;
     //public bool immune = false;
     //int counter = 0;
-    
+
 
 
     // Start is called before the first frame update
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour
         //shoots bullets
         if (Input.GetKeyDown(KeyCode.Space))
         {
+          shoot.Play();
           Instantiate(projectilePrefab, transform.position, transform.rotation);
         }
         
@@ -68,7 +71,8 @@ public class PlayerController : MonoBehaviour
         //if (!immune) {
             if (other.CompareTag("enemy") || other.CompareTag("danger"))
             {
-                //counter =0;
+            //counter =0;
+                damaged.Play();
                 playerHP--;
                 Destroy(other.gameObject);
                 if (playerHP <= 0)

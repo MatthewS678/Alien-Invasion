@@ -30,17 +30,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //playButton = GameObject.Find("Play Button").GetComponent<Button>();
-        //tutorialButton = GameObject.Find("Tutorial Button").GetComponent<Button>();
-        //quitButton = GameObject.Find("Quit Button").GetComponent<Button>();
-        //menuButton = GameObject.Find("Menu Button").GetComponent<Button>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerHPText.text = "HP: " + controller.playerHP;
+        playerHPText.text = "HP: " + controller.playerHP; //player HP text display
 
         if(controller.playerHP == 2)
         {
@@ -55,7 +51,6 @@ public class GameManager : MonoBehaviour
         if (controller.playerHP <= 0 || boundary.EarthDestroyed)
         {
             gameOver = true;
-            //Debug.Log("game over");
         }
 
         if(spawnManager.enemiesSpawned >= 50)
@@ -63,18 +58,14 @@ public class GameManager : MonoBehaviour
             gameWin = true;
         }
 
-        if (gameOver)
+        if (gameOver) //player hp <=0 or alien reaches Earth
         {
-            SceneManager.LoadScene(2);
-            //loseText.gameObject.SetActive(true);   
-            //winText.gameObject.SetActive(false);    
+            SceneManager.LoadScene(2);  
         }
 
         if (gameWin) //player destroys certain # of ships  
         {
             SceneManager.LoadScene(3);
-            //winText.gameObject.SetActive(false);
-            //loseText.gameObject.SetActive(true);
         }
 
     }

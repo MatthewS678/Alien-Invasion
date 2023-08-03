@@ -19,6 +19,7 @@ public class SpawnManager : MonoBehaviour
         //enemyVariety = 2; //index 1 and 2 are fighters, index 3 is destroyer
         //enemyCap = 8;
         //spawnInterval = 3.0f;
+        //^^^^starting values given by game manager
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class SpawnManager : MonoBehaviour
 
     }
 
-    IEnumerator spawnEnemy()
+    IEnumerator spawnEnemy() //spawns random enemies at random positions at the top of the screen
     {
         float randomXPos = Random.Range(-xRange, xRange);
         int enemyIndex = Random.Range(0, enemyVariety);

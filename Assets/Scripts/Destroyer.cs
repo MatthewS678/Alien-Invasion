@@ -7,7 +7,7 @@ public class Destroyer : MonoBehaviour
     [SerializeField] private float shotInterval;
     [SerializeField] private float shotDelay = 1.5f;
     [SerializeField] private float speed;
-    [SerializeField] private int HP = 3;
+    [SerializeField] private int HP = 3; //destroyers can take 3 damaged before being destroyed
     public GameObject projectilePrefab;
     public ParticleSystem explosionParticle;
 
@@ -34,7 +34,7 @@ public class Destroyer : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet")) 
         {
             HP--;
             Destroy(other.gameObject);

@@ -12,17 +12,13 @@ public class PlayerController : MonoBehaviour
     float xRange = 28.75f;
     float zRange = 16.0f;
     public int playerHP = 3;
-    public AudioSource damaged;
-    public AudioSource shoot;
-    //public bool immune = false;
-    //int counter = 0;
-
+    public AudioSource damagedSound; //sound that plays when player takes damage
+    public AudioSource shootSound; //sound that plays when bullet is fired
 
 
     // Start is called before the first frame update
     void Start()
-    {
-       //playerColor = GetComponent<Renderer>();  
+    { 
        playerRb = GetComponent<Rigidbody>();
     }
 
@@ -38,7 +34,7 @@ public class PlayerController : MonoBehaviour
         //shoots bullets
         if (Input.GetKeyDown(KeyCode.Space))
         {
-          shoot.Play();
+          shootSound.Play(); //plays shooting audio clip
           Instantiate(projectilePrefab, transform.position, transform.rotation);
         }
         
@@ -66,43 +62,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other) //damages player when touching a enemy bullet or ship, destroys the enemey ship/bullet
+    public void OnTriggerEnter(Collider other) //damages player when touching a enemy bullet or ship, destroys the enemey ship/bullet that damaged the player
     {
-        //if (!immune) {
-            if (other.CompareTag("enemy") || other.CompareTag("danger"))
+        if (other.CompareTag("enemy") || other.CompareTag("danger"))
+        {
+ 
+            damagedSound.Play(); //plays damaged audio clip
+            playerHP--;
+            Destroy(other.gameObject);
+            if (playerHP <= 0) //if player hp reaches 0 destroy the player
             {
-            //counter =0;
-                damaged.Play();
-                playerHP--;
-                Destroy(other.gameObject);
-                if (playerHP <= 0)
-                {
-                    Destroy(gameObject);
-                }
-                //immune = true;
-                //while (counter <= 10){
-                //    InvokeRepeating("TurnRed", 0f, 0.2f);
-               //     InvokeRepeating("TurnBlue", 0.1f, 0.2f);
-               // }
-               // immune = false;
+                Destroy(gameObject);
             }
+
+        }
      }
         
-    }
+}
 
-   // public void TurnRed()
-    //{
-    //    Color myColor = new Color(255, 0, 0, 160);
-    //    playerColor.material.color = myColor;
-     //   counter++;
-   // }
-
-    //public void TurnBlue()
-    //{
-     //   Color myColor = new Color(0, 0, 255, 160);
-     //   playerColor.material.color = myColor;
-    //    counter++;
-    //}
 
 
 
